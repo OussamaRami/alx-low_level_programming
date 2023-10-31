@@ -13,13 +13,13 @@ void print_magic(Elf64_Ehdr h)
 
 	printf("   Magic:   ");
 	for (i = 0; i < EI_NIDENT; i++)
-	printf("%2.2x%s", h.e_ident[i], i == EI_NIDENT - 1 ? "\n" : " ");
+	printf("%2.2x%s",h.e_ident[i], i == EI_NIDENT - 1 ? "\n" : " ");
 }
 
-/**
- *print_class - prints ELF class
- *@h: the ELF header struct
- */
+/*
+print_class - prints ELF class
+@h: the ELF header struct
+*/
 void print_class(Elf64_Ehdr h)
 {
 	printf("  Class:                             ");
@@ -37,10 +37,10 @@ void print_class(Elf64_Ehdr h)
 	}
 	printf("\n");
 }
-/**
- *print_data - prints ELF data
- *@h: the ELF header struct
- */
+/*
+print_data - prints ELF data
+@h: the ELF header struct
+*/
 void print_data(Elf64_Ehdr h)
 {
 	printf("  Data:                              ");
@@ -121,7 +121,7 @@ void print_osabi(Elf64_Ehdr h)
 }
 /**
  * print_osabi_more - prints ELF osabi more
- * @h: the ELF header struct
+ * @h: the ELF header struct 
 */
 void print_osabi_more(Elf64_Ehdr h)
 {
@@ -223,7 +223,7 @@ void print_entry(Elf64_Ehdr h)
  * main - program
  * @ac: argument count
  * @av: argument vector
- *
+ * 
  * Return: 1 on success 0 on failure
 */
 int main(int ac, char **av)

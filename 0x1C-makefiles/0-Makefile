@@ -1,2 +1,9 @@
-all: 
-	gcc main.c holberton.c -o holberton
+all: school
+
+school: main.c school.c
+	gcc $^ -o $@
+
+.PHONY: clean
+clean:
+	rm -f school
+

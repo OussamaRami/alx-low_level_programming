@@ -1,6 +1,13 @@
 CC = gcc
+SRC = main.c school.c
+EXECUTABLE = school
 
-SRC = main.c holberton.c
+all: $(EXECUTABLE)
 
-all: $(SRC)
-	$(CC) $(SRC) -o holberton
+$(EXECUTABLE): $(SRC)
+	$(CC) $^ -o $@
+
+.PHONY: clean
+clean:
+	rm -f $(EXECUTABLE)
+
